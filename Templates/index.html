@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <title>3rjon | مؤاقيت</title>
+</head>
+
+<body>
+
+  <header>
+    <img src="/static/imgs/nk1.png">
+    <h1 id="text">عرجون</h1>
+  </header>
+
+  <label id="lab1">أختار مدينتك</label>
+  <div>
+    <label id="lab2">تاريخ الهجري</label>
+    <span id ="hjiri"></span>
+    <label id="lab3">تاريخ الميلادي </label>
+      <span id ="mladi"></span>
+      <label id ="lab4">الوقت الحالي</label>
+      <span id ="mytime"></span>
+  </div>
+  
+  <div class="select">
+
+    <select id="allcitys">
+  <option value="" disabled selected>إختر</option>
+  <option value="Makkah">مكه</option>
+  <option value="Riyadh">الرياض</option>
+  <option value="Madinah">المدينة</option>
+  <option value="Qassim">القصيم </option>
+  <option value="Eastern Province">الشرقية</option>
+  <option value="Asir">عسير</option>
+  <option value="Tabuk">تبوك</option>
+  <option value="Hail">حائل</option>
+  <option value="Northern Borders">الشمالية</option>
+  <option value="Jazan">جازان</option>
+  <option value="Najran">نجران</option>
+  <option value="Bahah">الباحة</option>
+  <option value="Jawf">جوف</option>
+
+</select>
+  </div>
+
+
+  <div class="wrapper">
+    <img src="/static/imgs/root.png" id="root">
+    <img src="/static/imgs/dates.png" id="dates">
+    <h2 id="ddd1">الفجر</h2>
+
+    <h2 id="ddd2">الشروق</h2>
+    <h2 id="ddd3">الظهر</h>
+      <h2 id="ddd4">العصر</h2>
+      <h2 id="ddd5">المغرب</h2>
+      <h2 id="ddd6">العشاء</h2>
+
+      <h2 id="ttt1"></h2>
+      <h2 id="ttt2"></h2>
+      <h2 id="ttt3"></h>
+      <h2 id="ttt4"></h2>
+      <h2 id="ttt5"></h2>
+      <h2 id="ttt6"></h2>
+      
+      <h2 id ="mymo"></h2>
+  </div>
+
+
+
+  <div id="nk2">
+    <img src="/static/imgs/nk2.png">
+  </div>
+  <footer>
+    <img src="/static/imgs/nk1.png">
+    <h2 id ="day"></h2>
+    <h1 id ="old">«وَالْقَمَرَ قَدَّرْناهُ مَنازِلَ حَتَّى عادَ كَالْعُرْجُونِ الْقَدِيمِ»</h1>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  function handleRequest(ccc) {
+    axios.get("http://api.aladhan.com/v1/timingsByCity?city="+ccc +"&country=Kingdom%20Saudia%20Arabia&method=4").then(function(response) {
+      let hijri=response["data"]["data"] ["date"]["hijri"]["date"]
+      let meldi=response["data"]["data"]["date"]["gregorian"]["date"]
+      //date
+      document.getElementById("hjiri").innerText=hijri
+      document.getElementById("mladi").innerText=meldi
+      //times
+      let ppp=response["data"]["data"]["timings"]
+     document.getElementById("ttt1").innerText=ppp["Fajr"]
+     document.getElementById("ttt2").innerText=ppp["Sunrise"]
+     document.getElementById("ttt3").innerText=ppp["Dhuhr"]
+     document.getElementById("ttt4").innerText=ppp["Asr"]
+     document.getElementById("ttt5").innerText=ppp["Maghrib"]
+     document.getElementById("ttt6").innerText=ppp["Sunset"]
+     
+     //month
+     let month =response["data"]["data"]["date"]["hijri"]["month"]["ar"]
+     document.getElementById("mymo").innerText=month
+     //day
+    let day=response["data"]["data"]["date"]["hijri"]["weekday"]["ar"]
+     document.getElementById("day").innerText=day
+     
+     })
+     
+    };
+  
+var mycitys = document.querySelector('#allcitys');
+handleRequest("Makkah")
+mycitys.addEventListener("change", function() {
+  handleRequest(mycitys.value) 
+  
+});
+</script>
+
+  <script>
+  function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("mytime").innerText = time;
+    document.getElementById("mytime").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+  </script>
+</body>
+
+</html>
