@@ -25,4 +25,4 @@ def index():
 def my_view_func(name):
     return get_data(name)   
 if __name__ == "__main__":
-	app.run()
+    app.run(debug=True)
