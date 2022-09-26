@@ -362,7 +362,7 @@ option:hover {
   }
 }
 
-@media screen and (min-width:300px) and (max-width:900px) {
+@media screen and (min-width:361px) and (max-width:767px) {
 
   * {
     padding: 0;
@@ -611,7 +611,7 @@ option:hover {
 
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 360px) {
   header {
     width: 100%;
   }
