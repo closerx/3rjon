@@ -91,6 +91,14 @@ function alldata(city) {
       fetchRes.then(res =>
         res.json()).then(data => {
         console.log(data)
+      let hijri = data["data"]["date"]["hijri"]["date"]
+        let meldi = data["data"]["date"]["gregorian"]["date"]
+
+        //date
+        document.getElementById("hjiri").innerText = hijri
+        document.getElementById("mladi").innerText = meldi
+
+
       });
     };
   
