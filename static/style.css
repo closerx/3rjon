@@ -364,18 +364,18 @@ font-size: 30px;
     font-family:"Tajawal" serif;
   }
   header {
-    width: 105%;
+    width: 104%;
   }
   footer img{
     transform: rotate(180deg);
-    width: 105%;
+    width: 112%;
     position: absolute;
     bottom: -200rem;
   }
 
   header #text {
     top: 30px;
-    left: 110px;
+    left: 142px;
     font-size: 50px;
   }
 
@@ -387,7 +387,7 @@ font-size: 30px;
   #dates {
     width:180px;
     top:450px;
-    left:90px;
+    left:114px;
     animation: dodo 5s ease-in-out alternate ;
     animation-delay: 3s;
   }
@@ -435,7 +435,7 @@ font-size: 30px;
      position: absolute;
     width: 400px;
     height: 500px;
-    left: 5px;
+    left: 51px;
     bottom: -200rem;
 }
 
@@ -447,7 +447,7 @@ font-size: 30px;
   #mladi,
   #mytime{
     top: 100px;
-    left: 130px;
+    left: 160px;
     font-size: 20px;
   }
 
@@ -464,24 +464,24 @@ font-size: 30px;
   }
   #hjiri {
     top: 230px;
-    left: 120px;
+    left: 140px;
     font-size: 30px;
   }
 
   #mladi {
     top: 300px;
-    left: 120px;
+    left: 140px;
     font-size: 30px;
   }
   #mytime{
     top:380px;
-    left:120px;
+    left:135px;
     color:green;
     font-size:27px;
   }
   .select {
     top: 130px;
-    left: 50px;
+    left: 70px;
     width: 250px;
   }
   select{
@@ -521,7 +521,7 @@ font-size: 30px;
   #mymo{
    position: absolute;
     top: 823px;
-    left: 245px;
+    left: 270px;
     transform: rotate(-90deg);
     color: #ffffff;
     font-size: 25px;
@@ -530,7 +530,7 @@ font-size: 30px;
   /*old*/
   #old{
    position: absolute;
-    left: 45px;
+    left: 85px;
     bottom: -193em;
     margin: 0 20px;
     font-size: 13px;
@@ -539,7 +539,7 @@ font-size: 30px;
    #day{
     position: absolute;
     bottom: -107em;
-    margin: 0 181px;
+    margin: 0 205px;
     font-size: 25px;
     color: #A76B35;
    }
@@ -580,11 +580,34 @@ font-size: 30px;
 
 
 
-@media (max-width: 580px) {
-  .nav1 {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    overflow-x: auto;
+@media only screen and (max-width: 768px){
+   #dates {
+    width:180px;
+    top:450px;
+    left:90px;
+    animation: dodo 5s ease-in-out alternate ;
+    animation-delay: 3s;
   }
+  #mymo{
+   position: absolute;
+    top: 823px;
+    left: 245px;
+    transform: rotate(-90deg);
+    color: #ffffff;
+    font-size: 25px;
+  }
+  #nk2 img {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 5px;
+    bottom: -200rem;
+  }
+  #day{
+    position: absolute;
+    bottom: -107em;
+    margin: 0 181px;
+    font-size: 25px;
+    color: #A76B35;
+   }
 }
