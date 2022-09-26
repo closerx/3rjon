@@ -353,7 +353,7 @@ font-size: 30px;
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 812px){
   
   *{
     padding:0;
