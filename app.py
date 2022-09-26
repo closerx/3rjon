@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+import requests
 app = Flask(__name__,template_folder="./Templates")
 def get_data(city):
 	url="http://api.aladhan.com/v1/timingsByCity?city="+city+"&country=Kingdom%20Saudia%20Arabia&method=4"
