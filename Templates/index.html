@@ -90,14 +90,13 @@ function alldata(city) {
         "/data/" + city);
       fetchRes.then(res =>
         res.json()).then(data => {
-        console.log(data["day"])
-        console.log(data["hijri"])
-        //let hijri = data["data"]["date"]["hijri"]["date"]
-        //let meldi = data["data"]["date"]["gregorian"]["date"]
+       
+        let hijri = data["hijri"]
+        let meldi = data["mladi"]
 
         //date
-        //document.getElementById("hjiri").innerText = hijri
-        //document.getElementById("mladi").innerText = meldi
+        document.getElementById("hjiri").innerText = hijri
+        document.getElementById("mladi").innerText = meldi
 
 
       });
