@@ -353,7 +353,7 @@ font-size: 30px;
   }
 }
 
-@media only screen and (max-width: 812px){
+@media screen and (min-width:300px) and (max-width:900px){
   
   *{
     padding:0;
@@ -364,7 +364,7 @@ font-size: 30px;
     font-family:"Tajawal" serif;
   }
   header {
-    width: 104%;
+    width: 100%;
   }
   footer img{
     transform: rotate(180deg);
@@ -581,13 +581,6 @@ font-size: 30px;
 
 
 @media only screen and (max-width: 768px){
-   #dates {
-    width:180px;
-    top:450px;
-    left:90px;
-    animation: dodo 5s ease-in-out alternate ;
-    animation-delay: 3s;
-  }
   #mymo{
    position: absolute;
     top: 823px;
