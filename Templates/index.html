@@ -83,12 +83,19 @@
     <h1 id ="old">«وَالْقَمَرَ قَدَّرْناهُ مَنازِلَ حَتَّى عادَ كَالْعُرْجُونِ الْقَدِيمِ»</h1>
   </footer>
 
-<script>
-fetch('http://example.com/movies.json')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+ <script>
+    let fetchRes = fetch(
+      "https://jsonplaceholder.typicode.com/todos/1");
 
-</script>
+
+    fetchRes.then(res =>
+
+      res.json()).then(data => {
+
+      console.log(data)
+
+    })
+  </script>
 
   <script>
   function showTime(){
