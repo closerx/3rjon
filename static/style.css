@@ -368,7 +368,7 @@ font-size: 30px;
   }
   footer img{
     transform: rotate(180deg);
-    width: 112%;
+    width: 100%;
     position: absolute;
     bottom: -200rem;
   }
@@ -580,27 +580,6 @@ font-size: 30px;
 
 
 
-@media only screen and (max-width: 768px){
-  #mymo{
-   position: absolute;
-    top: 823px;
-    left: 245px;
-    transform: rotate(-90deg);
-    color: #ffffff;
-    font-size: 25px;
-  }
-  #nk2 img {
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    left: 5px;
-    bottom: -200rem;
-  }
-  #day{
-    position: absolute;
-    bottom: -107em;
-    margin: 0 181px;
-    font-size: 25px;
-    color: #A76B35;
-   }
+@media only screen and (max-width: 767px){
+  
 }
