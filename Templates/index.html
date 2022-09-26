@@ -97,8 +97,18 @@ function alldata(city) {
         //date
         document.getElementById("hjiri").innerText = hijri
         document.getElementById("mladi").innerText = meldi
-
-
+        lat month=data["month"]
+        document.getElementById("mymo").innerText = month
+        let day=data["day"]
+        document.getElementById("day").innerText = day
+        let ppp=data["times"]
+        //times dom
+        document.getElementById("ttt1").innerText = ppp["Fajr"]
+        document.getElementById("ttt2").innerText = ppp["Sunrise"]
+        document.getElementById("ttt3").innerText = ppp["Dhuhr"]
+        document.getElementById("ttt4").innerText = ppp["Asr"]
+        document.getElementById("ttt5").innerText = ppp["Maghrib"]
+        document.getElementById("ttt6").innerText = ppp["Sunset"]
       });
     };
   
