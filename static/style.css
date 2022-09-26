@@ -364,11 +364,11 @@ font-size: 30px;
     font-family:"Tajawal" serif;
   }
   header {
-    width: 100%;
+    width: 110%;
   }
   footer img{
     transform: rotate(180deg);
-    width: 100%;
+    width: 110%;
     position: absolute;
     bottom: -200rem;
   }
