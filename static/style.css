@@ -378,6 +378,10 @@ option:hover {
     width: 110%;
   }
 
+  header img {
+    height: 90px;
+  }
+
   footer img {
     transform: rotate(180deg);
     width: 110%;
@@ -389,7 +393,7 @@ option:hover {
     top: 30px;
     left: 142px;
     font-size: 50px;
-  
+
   }
 
   #root {
@@ -604,9 +608,7 @@ option:hover {
     top: 790px;
   }
 
-  header img {
-    height: 90px;
-  }
+
 }
 
 
@@ -616,8 +618,12 @@ option:hover {
     width: 100%;
   }
 
+  header img {
+    height: 90px;
+  }
+
   header #text {
-    top: 30px;
+    top: 5px;
     left: 120px;
     font-size: 50px;
   }
@@ -676,20 +682,21 @@ option:hover {
   /*month*/
   #mymo {
     position: absolute;
-    top: 823px;
-    left: 240px;
+    top: 815px;
+    left: 225px;
     transform: rotate(-90deg);
     color: #ffffff;
-    font-size: 25px;
+    font-size: 20px;
 
   }
-    #old {
-      position: absolute;
-      left: 35px;
-      bottom: -193em;
-      margin: 0 20px;
-      font-size: 13px;
-    }
+
+  #old {
+    position: absolute;
+    left: 35px;
+    bottom: -193em;
+    margin: 0 20px;
+    font-size: 13px;
+  }
 
   /*day*/
   #day {
@@ -699,12 +706,105 @@ option:hover {
     font-size: 25px;
     color: #A76B35;
   }
+
   #nk2 img {
     position: absolute;
     width: 400px;
     height: 500px;
     left: -5px;
     bottom: -200rem;
+  }
+
+  .select {
+    top: 130px;
+    left: 70px;
+    width: 250px;
+  }
+
+  select {
+    padding: 0 3em;
+  }
+
+  #root {
+    width: 180px;
+    margin-top: 290px;
+    margin-left: 0;
+  }
+
+  #dates {
+    width: 180px;
+    top: 450px;
+    left: 90px;
+    animation: dodo 5s ease-in-out alternate;
+    animation-delay: 3s;
+  }
+  
+  /*times*/
+  #ttt1,
+  #ttt2,
+  #ttt3,
+  #ttt4,
+  #ttt5,
+  #ttt6 {
+    position: absolute;
+    top: 465px;
+    font-size: 30px;
+    transform: rotate(35deg);
+    margin-left: 100px;
+    color: white;
+  }
+
+  #ttt2 {
+    top: 525px;
+  }
+
+  #ttt3 {
+    top: 585px;
+  }
+
+  #ttt4 {
+    top: 650px;
+  }
+
+  #ttt5 {
+    top: 710px;
+  }
+
+  #ttt6 {
+    top: 765px;
+  }
+    #ddd1,
+  #ddd2,
+  #ddd3,
+  #ddd4,
+  #ddd5,
+  #ddd6 {
+    position: absolute;
+    top: 445px;
+    transform: rotate(-30deg);
+    margin-right: 70px;
+    font-size: 25px;
+    color: white;
+  }
+
+  #ddd2 {
+    top: 510px;
+  }
+
+  #ddd3 {
+    top: 565px;
+  }
+
+  #ddd4 {
+    top: 620px;
+  }
+
+  #ddd5 {
+    top: 690px;
+  }
+
+  #ddd6 {
+    top: 750px;
   }
 
 
