@@ -679,6 +679,46 @@ option:hover {
     animation-delay: 3s;
   }
 
+
+  @-webkit-keyframes dodo {
+    0% {
+      /*top:800px*/
+      transform: rotate(45deg);
+    }
+
+    10% {
+      /*top:1000px;*/
+      transform: rotate(30deg);
+    }
+
+    25% {
+      transform: rotate(-30deg);
+    }
+
+    50% {
+      transform: rotate(50deg);
+    }
+
+    55% {
+      transform: rotate(-30deg);
+    }
+
+    59% {
+      transform: rotate(50deg);
+    }
+
+    60% {
+      top: 1040px;
+      transform: scaleX(0.5);
+    }
+
+    100% {
+      top: 300rem;
+      transform: scaleX(0.5);
+    }
+  }
+
+
   /*month*/
   #mymo {
     position: absolute;
